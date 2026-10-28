@@ -1,1 +1,390 @@
 
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>ŞANSORA | Şansın yeni ünvanı</title>
+  <meta name="description" content="ŞANSORA — Şansın yeni ünvanı. Yeniliklər və gələcək layihələr haqqında məlumat əldə et.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #e3bc67;
+      --gold-light: #ffe7ad;
+      --black: #080808;
+      --card: #151515;
+      --muted: #bcbcbc;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 7%;
+      background: rgba(8, 8, 8, 0.96);
+      border-bottom: 1px solid #332819;
+    }
+
+    .logo {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #eee;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 90px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 10%, #3a2a12 0%, #181108 35%, #080808 75%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-size: clamp(48px, 10vw, 90px);
+      line-height: 1.1;
+      letter-spacing: 5px;
+    }
+
+    .hero h2 {
+      margin-bottom: 15px;
+      font-size: clamp(22px, 4vw, 32px);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: #ddd;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #ffe7ad, #bc8a32);
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .card {
+      padding: 28px 22px;
+      border: 1px solid #44351f;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #1b1b1b, #101010);
+      text-align: center;
+    }
+
+    .card-icon {
+      margin-bottom: 12px;
+      font-size: 38px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--gold-light);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      max-width: 850px;
+      margin: auto;
+      padding: 28px;
+      border: 1px solid #4d3b20;
+      border-radius: 10px;
+      background: #17130c;
+      text-align: center;
+    }
+
+    .notice h3 {
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 23px;
+    }
+
+    .notice p {
+      color: #ddd;
+    }
+
+    .about {
+      background: #111;
+    }
+
+    .about-text {
+      max-width: 760px;
+      margin: auto;
+      color: #d0d0d0;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 15px 0 25px;
+      color: var(--muted);
+    }
+
+    .contact-box a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 28px 7%;
+      border-top: 1px solid #332819;
+      color: #999;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 15px 5%;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 65px 6%;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 52px 6%;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#home">ŞANSORA</a>
+
+    <nav>
+      <a href="#home">Ana səhifə</a>
+      <a href="#kampaniyalar">Kampaniyalar</a>
+      <a href="#haqqimizda">Haqqımızda</a>
+      <a href="#elaqe">Əlaqə</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Yeni bir başlanğıc</div>
+        <h1>ŞANSORA</h1>
+        <h2>Şansın yeni ünvanı.</h2>
+
+        <p>
+          Yeniliklər, maraqlı layihələr və gələcək kampaniyalar
+          haqqında məlumatları burada izlə.
+        </p>
+
+        <a class="button" href="#kampaniyalar">Kəşf et</a>
+      </div>
+    </section>
+
+    <section id="kampaniyalar">
+      <h2 class="section-title">Gələcək <span>kampaniyalar</span></h2>
+
+      <p class="section-intro">
+        ŞANSORA hazırlanma mərhələsindədir. Yeni layihələr
+        və elanlar hazır olduqda bu səhifədə paylaşılacaq.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">✨</div>
+          <h3>Yeniliklər</h3>
+          <p>
+            ŞANSORA ilə bağlı yeni məlumatları izləmək üçün
+            səhifəmizi yadda saxla.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🎁</div>
+          <h3>Gələcək layihələr</h3>
+          <p>
+            Yeni layihələr haqqında məlumatlar rəsmi elanlarla
+            birlikdə burada yerləşdiriləcək.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🔔</div>
+          <h3>Şəffaf məlumat</h3>
+          <p>
+            Gələcək fəaliyyətlərin şərtləri və qaydaları
+            əvvəlcədən açıqlanacaq.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="notice">
+        <h3>Tezliklə ŞANSORA-da</h3>
+        <p>
+          Hazırda aktiv uduş və ya ödənişli iştirak kampaniyası
+          yoxdur. Gələcək fəaliyyətlər müvafiq hüquqi tələblər
+          yoxlanıldıqdan sonra elan ediləcək.
+        </p>
+      </div>
+    </section>
+
+    <section class="about" id="haqqimizda">
+      <h2 class="section-title">Haqqımızda</h2>
+
+      <p class="about-text">
+        ŞANSORA — yenilikləri, xüsusi layihələri və maraqlı
+        təklifləri bir platformada təqdim etmək məqsədilə
+        hazırlanan layihədir. Məqsədimiz aydın məlumat vermək
+        və istifadəçilərin etibarını qazanmaqdır.
+      </p>
+    </section>
+
+    <section id="elaqe">
+      <div class="contact-box">
+        <h2 class="section-title">Bizimlə <span>əlaqə</span></h2>
+
+        <p>
+          Əməkdaşlıq və suallar üçün rəsmi əlaqə məlumatlarımız
+          hazır olduqda bu bölmədə paylaşılacaq.
+        </p>
+
+        <p>ŞANSORA — Şansın yeni ünvanı.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-logo">ŞANSORA</span>
+    <p>© 2026 ŞANSORA. Bütün hüquqlar qorunur.</p>
+    <p>Bu sayt ilkin təqdimat səhifəsidir.</p>
+  </footer>
+</body>
+</html>
